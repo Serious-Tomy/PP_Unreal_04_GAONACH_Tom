@@ -25,4 +25,21 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UStaticMeshComponent* Mesh;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UStaticMeshComponent* Canon;
+
+
+	UPROPERTY(EditAnywhere)
+	int TurretHealth = 10;
+
+	void TakeDamage_Implementation(int amount);
+
+	void Shoot();
+
+	int Damage;
+
+	float Timer;
 };
