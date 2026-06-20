@@ -27,4 +27,7 @@ public:
 	UTextBlock* EndText;
 	UPROPERTY(EditDefaultsOnly, meta = (BindWidget))
 	UProgressBar* Health;
+
+protected:
+    virtual void NativeConstruct() override;
 };

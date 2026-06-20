@@ -18,8 +18,14 @@ class ARattrapage_CPP_BPGameMode : public AGameModeBase
 public:
 	ARattrapage_CPP_BPGameMode();
 
-	UPROPERTY(VisibleAnywhere)
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
 	UFlagManager* FlagManager;
+
+	UFUNCTION(BlueprintCallable)
+	int GetKills();
+
+	UFUNCTION(BlueprintCallable)
+	void IncrementKills();
 };
 
 

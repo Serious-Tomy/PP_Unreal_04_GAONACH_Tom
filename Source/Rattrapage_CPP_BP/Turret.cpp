@@ -54,6 +54,7 @@ void ATurret::TakeDamage_Implementation(int amount)
 
 void ATurret::Shoot()
 {
+	if (!Canon) return;
 	FHitResult Hit;
 	ECollisionChannel Channel(ECC_GameTraceChannel1);
 	FVector Starting = Canon->GetComponentLocation();
